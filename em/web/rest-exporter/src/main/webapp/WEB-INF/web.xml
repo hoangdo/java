@@ -10,7 +10,7 @@
   </context-param>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>org.springframework.data.rest.example.ApplicationConfig</param-value>
+    <param-value>phx.em.service.config.ApplicationConfig</param-value>
   </context-param>
 
   <listener>
