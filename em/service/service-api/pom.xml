@@ -8,12 +8,19 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>phx.em.service</groupId>
-  <artifactId>api</artifactId>
+  <artifactId>service-api</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>PHX:EMPLOYEE_MANAGEMENT:SERVICE:API</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <dependencies>
+  	<dependency>
+	  	<groupId>org.hibernate.javax.persistence</groupId>
+	  	<artifactId>hibernate-jpa-2.0-api</artifactId>
+  	</dependency>
+  </dependencies>
  
 </project>
