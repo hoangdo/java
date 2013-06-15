@@ -17,7 +17,7 @@
   </properties>
   
   <modules>
-    <module>api</module>
-    <module>jpa-impl</module>
+    <module>service-api</module>
+    <module>service-jpa-impl</module>
   </modules>
 </project>
