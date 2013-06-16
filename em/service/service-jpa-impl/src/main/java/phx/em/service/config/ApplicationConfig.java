@@ -32,7 +32,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import phx.em.model.AbstractEntity;
 
 /**
- * Application configuration.Ê
+ * Application configuration.
  */
 @Configuration
 @ComponentScan(basePackages = { "phx.em.repository", "phx.em.service" })
@@ -55,6 +55,7 @@ public class ApplicationConfig {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		vendorAdapter.setDatabase(Database.MYSQL);
 		vendorAdapter.setGenerateDdl(true);
+		vendorAdapter.setShowSql(true);
 
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendorAdapter);
