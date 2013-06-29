@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/")
 public class AppController {
 
-	@RequestMapping(method = RequestMethod.GET, value = "/{client}/{app}")
-	public String enter(@PathVariable String client, @PathVariable String app) {
-		return client + "/" + app;
+	@RequestMapping(method = RequestMethod.GET, value = "/{client}/")
+	public String enter(@PathVariable String client) {
+		return client + "/" + "app";
 	}
 }

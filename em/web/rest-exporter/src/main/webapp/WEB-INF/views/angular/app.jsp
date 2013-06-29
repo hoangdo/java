@@ -1,12 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@page pageEncoding="UTF-8" %>
+<!doctype html>
+<html lang="en" ng-app>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Employee Management with Angular JS</title>
+<link rel="stylesheet"
+  href="${pageContext.request.contextPath}/lib/bootstrap/css/bootstrap.css">
+<script charset="UTF-8"
+  src="${pageContext.request.contextPath}/lib/angular/js/angular.js"></script>
+<script charset="UTF-8"
+  src="${pageContext.request.contextPath}/lib/app/js/controller.js"></script>
 </head>
-<body>
-
+<body ng-controller="PhoneListCtrl">
+  <ul>
+    <li ng-repeat="phone in phones">{{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
 </body>
 </html>
