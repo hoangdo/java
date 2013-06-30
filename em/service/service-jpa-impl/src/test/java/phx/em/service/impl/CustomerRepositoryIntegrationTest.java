@@ -75,14 +75,6 @@ public class CustomerRepositoryIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	@Test
-	public void findsCustomersByEmailAddress() {
-		Customer result = repository.findByEmailAddress(new EmailAddress("dave@dmband.com"));
-		assertThat(result, is(notNullValue()));
-		assertThat(result.getFirstname(), is("Dave"));
-		assertThat(result.getLastname(), is("Matthews"));
-	}
-
-	@Test
 	public void findsAllCustomers() {
 		List<Customer> customers = repository.findAll();
 		assertThat(customers, hasSize(3));

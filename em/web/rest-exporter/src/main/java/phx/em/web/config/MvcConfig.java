@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages = "phx.em.web.controller")
 @EnableWebMvc
-public class WebConfig extends WebMvcConfigurerAdapter {
+public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
   public ViewResolver getViewResolver(){
       InternalResourceViewResolver resolver = new InternalResourceViewResolver();

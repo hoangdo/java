@@ -1,6 +1,6 @@
-<%@page pageEncoding="UTF-8" %>
+<%@page pageEncoding="UTF-8"%>
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="customerMgmt">
 <head>
 <meta charset="UTF-8">
 <title>Employee Management with Angular JS</title>
@@ -9,13 +9,13 @@
 <script charset="UTF-8"
   src="${pageContext.request.contextPath}/lib/angular/js/angular.js"></script>
 <script charset="UTF-8"
+  src="${pageContext.request.contextPath}/lib/app/js/app.js"></script>
+<script charset="UTF-8"
   src="${pageContext.request.contextPath}/lib/app/js/controller.js"></script>
 </head>
-<body ng-controller="PhoneListCtrl">
-  <ul>
-    <li ng-repeat="phone in phones">{{phone.name}}
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
+<body>
+
+  <div ng-view></div>
+
 </body>
 </html>

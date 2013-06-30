@@ -1,12 +1,13 @@
-function PhoneListCtrl($scope) {
-	$scope.phones = [ {
-		"name" : "Nexus S",
-		"snippet" : "Fast just got faster with Nexus S."
-	}, {
-		"name" : "Motorola XOOM with Wi-Fi",
-		"snippet" : "The Next, Next Generation tablet. "
-	}, {
-		"name" : "MOTOROLA XOOM",
-		"snippet" : "T,he Next, Next Generation tablet."
-	} ];
+function CustomerListController($scope, $http) {
+	$http.get('../../service/customer').success(function(data) {
+		$scope.customers = data.content;
+	});
+
+	$scope.orderProp = 'firstname';
 }
+
+function CustomerDetailController($scope, $routeParams, $http) {
+	  $http.get('../../service/customer/' + $routeParams.customerId).success(function(data) {
+	    $scope.customer = data;
+	  });
+	}
